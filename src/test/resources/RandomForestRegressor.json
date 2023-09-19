@@ -1,0 +1,26 @@
+{
+  "algorithmIo": {
+    "features": "CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT",
+    "label": "MEDV"
+  },
+  "algorithm": {
+    "checkpointInterval": -1,
+    "featureSubsetStrategy": "auto",
+    "maxBins": 32,
+    "maxDepth": 5,
+    "minInfoGain": 0.0,
+    "minInstancesPerNode": 1,
+    "subsamplingRate": 1.0,
+    "numTrees": 20
+
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_table": "housing",
+    "output_model_path": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/RandomForestRegressor"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.regression.RandomForestRegressor"
+  }
+}

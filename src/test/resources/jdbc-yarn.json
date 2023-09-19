@@ -1,0 +1,30 @@
+{
+  "algorithmIo": {
+    "url": "jdbc:mysql://localhost:3306/ml",
+    "table": "city",
+    "user": "root",
+    "password": "admin",
+    "outputFormat": "csv",
+    "outputDelimiter": ",",
+    "outputHasHeader": true
+  },
+  "algorithm": {
+    "ratio": 0.8
+  },
+  "resource": {
+    "appName": "Split",
+    "deployMode": "local",
+    "programType": "JAVA",
+    "driverCores": 1,
+    "driverMemory": "1G",
+    "numExecutors": "1",
+    "executorCores": "1",
+    "executorMemory": "1G"
+  },
+  "anchor": {
+    "OUTPUT_TABLE": "/jdbcoutput"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.source.JdbcSource"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "algorithmIo": {
+    "inputFormat": "csv",
+    "inputDelimiter": ",",
+    "inputHasHeader": true,
+    "outputFormat": "csv",
+    "outputDelimiter": ",",
+    "outputHasHeader": true,
+    "features": "0-3"
+  },
+  "algorithm": {
+  },
+  "resource": {
+    "appName": "Prediction",
+    "deployMode": "local",
+    "mainJar": "/work/third/spark_ml-1.0-SNAPSHOT-jar-with-dependencies.jar",
+    "programType": "JAVA",
+    "driverCores": 1,
+    "driverMemory": "1G",
+    "numExecutors": "1",
+    "executorCores": "1",
+    "executorMemory": "1G"
+  },
+  "anchor": {
+    "input_model_path": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/model",
+    "input_table": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/hdfsoutput",
+    "OUTPUT_TABLE": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/prediction_data"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.prediction.Prediction"
+  }
+}

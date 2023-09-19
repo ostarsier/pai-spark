@@ -1,0 +1,15 @@
+{
+  "algorithmIo": {
+  },
+  "algorithm": {
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_table": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/ClassificationPrediction",
+    "OUTPUT_TABLE": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/MulticlassClassificationEvaluator"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.evaluation.MulticlassClassificationEvaluator"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "algorithmIo": {
+  },
+  "algorithm": {
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_table": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/prediction_data",
+    "OUTPUT_TABLE": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/RegressionEvaluator"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.evaluation.RegressionEvaluator"
+  }
+}

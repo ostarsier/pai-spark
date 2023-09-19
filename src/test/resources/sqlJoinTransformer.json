@@ -1,0 +1,19 @@
+{
+  "algorithmIo": {
+    "url": "jdbc:mysql://localhost:3306/ai",
+    "username": "root",
+    "password": "admin"
+  },
+  "algorithm": {
+    "output_table": "C",
+    "statement": "SELECT Class.class_name, Student.student_name FROM Class JOIN Student ON Class.class_id = Student.class_id;"
+  },
+  "resource": {
+  },
+  "anchor": {
+    "OUTPUT_TABLE": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/sql_join_output"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.feature.transformer.SQLJoinTransformer"
+  }
+}

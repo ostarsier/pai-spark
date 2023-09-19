@@ -1,0 +1,24 @@
+{
+  "algorithmIo": {
+    "features": "CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT",
+    "label": "MEDV"
+  },
+  "algorithm": {
+    "elasticNetParam": 0.8,
+    "family": "auto",
+    "fitIntercept": true,
+    "maxIter": 10,
+    "regParam": 0.0,
+    "standardization": true,
+    "tol": 0
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_table": "housing",
+    "output_model_path": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/model"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.classification.LogisticRegression"
+  }
+}

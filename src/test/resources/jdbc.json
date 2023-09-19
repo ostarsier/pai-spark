@@ -1,0 +1,29 @@
+{
+  "algorithmIo": {
+    "tableName": "boston_house_prices",
+    "schemaName": "ml",
+    "url": "jdbc:mysql://localhost:3306/ai",
+    "username": "root",
+    "password": "admin"
+  },
+  "algorithm": {
+    "ratio": 0.8
+  },
+  "resource": {
+    "appName": "Split",
+    "deployMode": "local",
+    "mainJar": "/work/third/spark_ml-1.0-SNAPSHOT-jar-with-dependencies.jar",
+    "programType": "JAVA",
+    "driverCores": 1,
+    "driverMemory": "1G",
+    "numExecutors": "1",
+    "executorCores": "1",
+    "executorMemory": "1G"
+  },
+  "anchor": {
+    "output_table": "boston_house_prices2"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.source.JdbcSource"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "algorithmIo": {
+    "features": "CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT"
+  },
+  "algorithm": {
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_model_path": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/RandomForestRegressor",
+    "input_table": "housing",
+    "output_table": "housing_predict"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.prediction.Prediction"
+  }
+}

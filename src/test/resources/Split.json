@@ -1,0 +1,17 @@
+{
+  "algorithmIo": {
+  },
+  "algorithm": {
+    "ratio": 0.8
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_table": "iris",
+    "output_table_1": "iris_1",
+    "output_table_2": "iris_2"
+  },
+  "algorithmExt": {
+      "className": "com.shelbin.ml.algorithm.pretreatment.Spliter"
+  }
+}

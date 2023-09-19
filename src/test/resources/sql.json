@@ -1,0 +1,16 @@
+{
+  "algorithmIo": {
+  },
+  "algorithm": {
+    "statement": "SELECT Sepal_Length,Species FROM  __THIS__ "
+  },
+  "resource": {
+  },
+  "anchor": {
+    "input_table": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/training_data",
+    "OUTPUT_TABLE": "/Users/shelbin/IdeaProjects/learn/ml_algorithm/src/test/resources/sql_data"
+  },
+  "algorithmExt": {
+    "className": "com.shelbin.ml.algorithm.feature.transformer.SQLTransformer"
+  }
+}
