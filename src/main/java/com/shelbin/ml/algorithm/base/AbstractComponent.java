@@ -26,6 +26,7 @@ import org.jpmml.sparkml.PMMLBuilder;
 import javax.xml.transform.stream.StreamResult;
 import java.io.IOException;
 import java.util.Arrays;
+import org.apache.spark.sql.functions;
 
 /**
  * 所有spark组件的顶级父类
@@ -149,6 +150,10 @@ public abstract class AbstractComponent {
      * 保存模型的PMML格式
      */
     protected void savePmml() throws JAXBException {
+        for (String columnName : inputData.columns()) {
+            inputData = inputData.withColumn(columnName,
+                    functions.col(columnName).cast("double"));
+        }
         PMML pmml = new PMMLBuilder(inputData.schema(), pipelineModel).build();
         String pmmlPath = outputModelPath() + ".pmml";
         Configuration conf = new Configuration();
