@@ -16,6 +16,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.spark.ml.PipelineModel;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
+import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.streaming.util.HdfsUtils;
 import org.dmg.pmml.PMML;
@@ -123,6 +124,7 @@ public abstract class AbstractComponent {
                 .option("dbtable", String.format("`%s`.%s", dbName, outputTable))
                 .option("user", username)
                 .option("password", password)
+                .mode(SaveMode.Overwrite)
                 .save();
 
     }
