@@ -116,7 +116,9 @@ public abstract class AbstractComponent {
     }
 
     protected void write(Dataset<Row> outputData, String outputTable) {
-        outputData.write()
+        Dataset<Row>  lowerColumnDataset = columnNameToLowerCase(outputData);
+
+        lowerColumnDataset.write()
                 .format("jdbc")
                 .option("createTableOptions", "ENGINE = Log()")
                 .option("driver", "ru.yandex.clickhouse.ClickHouseDriver")
@@ -126,7 +128,14 @@ public abstract class AbstractComponent {
                 .option("password", password)
                 .mode(SaveMode.Overwrite)
                 .save();
+    }
 
+    private static Dataset<Row>  columnNameToLowerCase(Dataset<Row> outputData) {
+        Dataset<Row> updatedDataset = outputData;
+        for (String columnName : outputData.columns()) {
+            updatedDataset = updatedDataset.withColumnRenamed(columnName, columnName.toLowerCase());
+        }
+        return updatedDataset;
     }
 
     /**
