@@ -69,9 +69,9 @@ public class RegressionEvaluator extends AbstractComponent {
         metrics.put("mad", mad);
 
         StructType schema = new StructType()
-                .add("参数", DataTypes.StringType)
-                .add("描述", DataTypes.StringType)
-                .add("值", DataTypes.StringType);
+                .add("parameter", DataTypes.StringType)
+                .add("description", DataTypes.StringType)
+                .add("value", DataTypes.StringType);
 
         List<String> keys = Lists.newArrayList("sst", "sse", "ssr", "r2", "r", "mse", "rmse", "mae", "mad", "mape", "count", "yMean", "predictionMean");
         List<String> keysCn = Lists.newArrayList("总平方和", "误差平方和", "回归平方和", "判定系数", "多重相关系数", "均方误差", "均方根误差", "平均绝对误差", "平均误差", "平均绝对百分误差", "行数", "原始因变量的均值", "预测结果的均值");

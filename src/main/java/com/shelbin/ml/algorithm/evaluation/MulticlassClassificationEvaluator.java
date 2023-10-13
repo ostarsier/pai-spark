@@ -33,9 +33,9 @@ public class MulticlassClassificationEvaluator extends AbstractComponent {
         }
 
         StructType schema = new StructType()
-                .add("参数", DataTypes.StringType)
-                .add("描述", DataTypes.StringType)
-                .add("值", DataTypes.StringType);
+                .add("parameter", DataTypes.StringType)
+                .add("description", DataTypes.StringType)
+                .add("value", DataTypes.StringType);
 
         Row[] rows = new Row[metricNames.size()];
         for (int i = 0; i < metricNames.size(); i++) {

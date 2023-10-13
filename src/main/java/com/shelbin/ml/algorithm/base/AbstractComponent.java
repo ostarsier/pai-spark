@@ -143,7 +143,7 @@ public abstract class AbstractComponent {
      * 保存模型
      */
     protected void save() throws IOException {
-        pipelineModel.save(anchor.getString(AnchorConstants.OUTPUT_MODEL_PATH));
+        pipelineModel.write().overwrite().save(anchor.getString(AnchorConstants.OUTPUT_MODEL_PATH));
     }
 
     /**
