@@ -118,10 +118,10 @@ public abstract class AbstractComponent {
 
     protected void write(Dataset<Row> outputData, String outputTable) {
         Dataset<Row>  lowerColumnDataset = columnNameToLowerCase(outputData);
-
+        lowerColumnDataset.withColumn("_id_", functions.monotonicallyIncreasingId());
         lowerColumnDataset.write()
                 .format("jdbc")
-                .option("createTableOptions", "ENGINE = Log()")
+                .option("createTableOptions", "ENGINE = MergeTree() ORDER BY _id_")
                 .option("driver", "ru.yandex.clickhouse.ClickHouseDriver")
                 .option("url", url)
                 .option("dbtable", String.format("`%s`.%s", dbName, outputTable))
